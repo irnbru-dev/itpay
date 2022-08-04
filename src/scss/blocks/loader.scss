@@ -1,0 +1,46 @@
+.loader {
+  text-align: center;
+  margin-top: 20px;
+
+  @include media-lg {
+    margin-top: 80px;
+  }
+
+  &__ring {
+    @include flex($ai: center, $jc: center);
+    width: 72px;
+    height: 72px;
+    margin: 0 auto;
+    animation: spin 1.4s ease infinite;
+  }
+
+  &__text {
+    margin-top: 24px;
+  }
+
+  &__response {
+    @include font($ff: $f-head, $fz: 32px, $fw: 600, $lc: -0.02em);
+    @include invisible;
+    margin-top: 6px;
+  }
+
+  &__success {
+    @include invisible;
+  }
+
+  &.success {
+
+    .loader {
+
+      &__text,
+      &__ring {
+        display: none;
+      }
+
+      &__response,
+      &__success {
+        @include visible;
+      }
+    }
+  }
+}

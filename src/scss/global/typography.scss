@@ -1,0 +1,47 @@
+h1, h2, h3, h4, h5 {
+  font-family: $f-head;
+}
+
+h1 {
+  @include font($fz: 50px, $lh: 0.95, $fw: 500, $lc: -0.02em);
+
+  @include media-md {
+    font-size: 68px;
+  }
+}
+
+h2,
+.h2-style {
+  @include font($fz: 36px, $lh: 1.1, $fw: 500, $lc: -0.01em);
+
+  @include media-md {
+    font-size: 48px;
+  }
+}
+
+h3,
+.h3-style {
+  @include font($fz: 24px, $lh: 1.2, $fw: 500);
+  @include media-sm {
+
+  }
+  @include media-xl {
+    font-size: 26px;
+  }
+}
+
+h4 {
+  //@include font($fz: 18px, $lh: 1.73, $fw: 500);
+}
+
+h5 {
+  //@include font($fz: 14px, $lh: 1.43, $fw: 500);
+}
+
+p {
+  @include font($fz: 16px, $lh: 1.5);
+
+  //&:not(:last-child) {
+  //  @include contentBlockMargin;
+  //}
+}

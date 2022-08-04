@@ -1,0 +1,20 @@
+@import "global/normalize";
+@import "global/fonts";
+@import "global/variables";
+@import "global/mixins";
+@import "global/typography";
+@import "global/global";
+@import "global/animation";
+
+@import "blocks/buttons/btn";
+@import "blocks/buttons/btn-types";
+@import "blocks/buttons/btn-sizes";
+@import "blocks/buttons/btn-content";
+
+@import "blocks/converter";
+@import "blocks/price";
+@import "blocks/search";
+@import "blocks/loader";
+@import "blocks/qr";
+
+@import "blocks/footer";

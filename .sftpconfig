@@ -1,0 +1,9 @@
+{
+  "connect": {
+    "host": "hst11.itglobal.com",
+    "port": "22",
+    "username": "dbornyakova",
+    "password": "HXc,(WJ=R8+XDYk"
+  },
+  "path": "/var/www/html/rucoinfoundation-ru"
+}

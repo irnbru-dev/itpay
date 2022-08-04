@@ -1,0 +1,59 @@
+include ../inc/_mixins
+
+doctype html
+html(lang='ru')
+    head
+        include ../inc/_head
+    body.main-page
+        .converter-wrap
+            .converter
+                .converter__header
+                    include ../blocks/address
+                    //include ../blocks/price
+                    //include ../blocks/search
+
+                .converter__body
+                    //include ../blocks/payments
+                    //include ../blocks/banks
+                    //include ../blocks/loader
+                    include ../blocks/qr
+
+                .converter__footer
+                    //FIRST
+                    //.converter__btns
+                        //button.btn.btn--full.btn--md.btn--wide
+                        //    .btn__text Выбрать
+                        //    .btn__icon.btn__icon--sm.btn__icon--right
+                        //        +img('arrow_r')
+
+                    //SECOND
+                    //.converter__btns.converter__btns--row
+                    //    button.btn.btn--empty-brand.btn--md.btn--center
+                    //        .btn__icon.btn__icon--sm
+                    //            +img('arrow_l')
+                    //
+                    //    button.btn.btn--full.btn--md
+                    //        .btn__text Далее
+                    //        .btn__icon.btn__icon--sm.btn__icon--right
+                    //            +img('arrow_r')
+
+                    //THIRD
+                    //.converter__btns
+                    //    button.btn.btn--empty-brand.btn--md.btn--wide.btn--center
+                    //        .btn__icon.btn__icon--sm.btn__icon--left
+                    //            +img('arrow_l')
+                    //        .btn__text Назад
+
+                    //FOURTH
+                    .converter__btns.converter__btns--col
+                        button.btn.btn--full.btn--md.btn--wide
+                            .btn__text Получить подарок!
+                            .btn__icon.btn__icon--sm.btn__icon--right
+                                +img('gift')
+                        button.btn.btn--empty-brand.btn--md.btn--wide
+                            .btn__text Оставить чаевые
+                            .btn__icon.btn__icon--sm.btn__icon--right
+                                +img('percentage')
+
+                    include ../blocks/powered
+        include ../inc/_scripts

@@ -1,0 +1,18 @@
+.btn {
+
+  &--wide {
+    width: 100%;
+  }
+
+  &--md {
+    @include font($fz: 16px, $fw: 500, $lc: -0.01em);
+    height: 54px;
+    padding: 0 16px;
+  }
+
+  &--sm {
+    @include font($fz: 16px, $fw: 500, $lc: -0.01em, $lh: 0);
+    height: 38px;
+    padding: 0 16px;
+  }
+}

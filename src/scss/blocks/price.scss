@@ -1,0 +1,16 @@
+.price {
+  border: 1px solid $c-border-light;
+  border-radius: $br-def;
+  padding: 16px;
+  text-align: center;
+  margin-top: 16px;
+
+  &__text {
+    @include font($fs: 16px);
+    margin-bottom: 4px;
+  }
+
+  &__num {
+    @include font($ff: $f-head, $fz: 48px, $fw: 600, $lc: -0.02em);
+  }
+}

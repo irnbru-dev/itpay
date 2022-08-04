@@ -1,0 +1,18 @@
+- var logo = mainPageLogo || 'logo.svg';
+header.header
+  .container
+    .header__row
+      .header__logo
+        a(href="/")
+          img(src="/assets/img/" + logo)
+      .header__menu.menu
+        .menu__item
+          a.menu__link(href="/partners/") Партнеры
+        .menu__item
+          a.menu__link(href="/contacts/") Контакты
+      //  div.burger-btn.mobile-menu-trigger
+      //    span
+      .header__btn
+        .btn.btn--sm.btn--empty(data-toggle='modal', data-target='#modal-form') Узнать больше
+
+include mobile-menu

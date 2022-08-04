@@ -1,0 +1,92 @@
+.converter {
+  @include flex($fd: column, $fg: 1);
+  @include relative;
+  background: $c-white;
+  height: 100%;
+  max-width: 360px;
+
+  &-wrap {
+    @include flex($ai: center, $jc: center);
+    height: 100vh;
+
+    @include media-lg {
+      padding: 40px 0;
+    }
+  }
+
+  &__header {
+    padding: 24px 20px 0;
+  }
+
+  &__body {
+    @include relative;
+    flex: 1;
+    overflow: auto;
+    overflow-x: hidden;
+    padding: 0 20px;
+    margin: 20px 0;
+
+    &.scrollable {
+      padding-right: 1px;
+    }
+  }
+
+  &__footer {
+    padding: 20px 20px 15px;
+  }
+
+  &__logo {
+    max-width: 226px;
+    margin: 0 auto;
+  }
+
+  &__address {
+    @include font($fz: 14px, $c: $c-text-secondary);
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  &__list {
+    margin-top: 8px;
+
+    &-title {
+      margin-bottom: 18px;
+    }
+
+    &-item {
+
+      & + & {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__btns {
+
+    &--row {
+      @include grid($gtc: 54px 1fr, $gap: 16px);
+    }
+
+    &--col {
+
+      .btn + .btn {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__powered {
+    @include flex($ai: center, $jc: center);
+    width: 100%;
+    margin-top: 15px;
+
+    span {
+      @include font($fz: 12px, $c: $c-text-secondary);
+    }
+
+    svg {
+      margin-left: 5px;
+      margin-top: 3px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+include ../inc/_mixins
+
+-
+    var banks = {
+        '1': {
+            'title': 'Тинькофф банк',
+            'logo': 'tinkoff'
+        },
+        '2': {
+            'title': 'Альфа-Банк',
+            'logo': 'alfabank'
+        },
+        '3': {
+            'title': 'Сбербанк',
+            'logo': 'sber'
+        },
+        '4': {
+            'title': 'ВТБ',
+            'logo': 'vtb'
+        },
+        '5': {
+            'title': 'Райффайзен Банк',
+            'logo': 'raiffeisen'
+        },
+        '6': {
+            'title': 'Открытие',
+            'logo': 'otkritie'
+        }
+    }
+
+.converter__list
+    - var i = 0;
+    for payment in banks
+        if i < 3
+            .converter__list-item
+                button.btn.btn--empty.btn--md.btn--wide
+                    .btn__icon.btn__icon--left.btn__icon--circle
+                        +img(payment.logo)
+                    .btn__text= payment.title
+                    .btn__icon.btn__icon--sm.btn__check
+                        +img('tick')
+            - i++
+
+    .converter__list-item
+        button.btn.btn--empty.btn--md.btn--wide(data-toggle='more')
+            .btn__icon.btn__icon--left.btn__icon--circle
+                +img('dots')
+            .btn__text Другой банк
+            .btn__icon.btn__icon--sm.btn__check
+                +img('tick')

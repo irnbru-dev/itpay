@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  @include font($ff: $f-def, $c: $c-text);
+  @include flex($fd: column);
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $c-bg-light;
+
+  &:before {
+    @include fixed($t: 0, $r: 0, $b: 0, $l: 0);
+    content: '';
+    background: rgba($c-text, 0.9);
+    z-index: 2;
+    @include invisible();
+  }
+
+  &.ios-browser {
+    input,
+    select,
+    textarea {
+      font-size: inherit !important;
+    }
+  }
+
+  &.lock {
+    overflow: hidden;
+  }
+
+  &.open-modal {
+
+    &:before {
+      @include visible;
+    }
+  }
+
+  textarea {
+    max-height: 96px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  color: $c-brand;
+  text-decoration: none;
+  transition: color $t-def;
+
+  @include hover {
+    cursor: pointer;
+    color: $c-hover;
+  }
+
+  &:active {
+    color: $c-active;
+  }
+
+  &:visited {
+
+  }
+}
+
+button {
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+
+  @include hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 2px solid rgba($c-brand, .2);
+  }
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+
+  &::marker {
+    color: $c-brand;
+  }
+}
+
+.container {
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1220px;
+}

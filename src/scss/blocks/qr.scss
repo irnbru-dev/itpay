@@ -1,0 +1,14 @@
+.qr {
+  @include flex($fd: column, $ai: center);
+  text-align: center;
+  margin-top: 8px;
+
+  &__code {
+    width: 216px;
+    height: 216px;
+    padding: 16px;
+    margin: 24px 0;
+    border: 1px solid $c-border-light;
+    border-radius: $br-def;
+  }
+}

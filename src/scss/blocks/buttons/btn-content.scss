@@ -1,0 +1,42 @@
+.btn {
+
+  &__icon {
+    @include flex($ai:center, $jc: center);
+    width: 30px;
+    height: 30px;
+
+    &--sm {
+      width: 24px;
+      height: 24px;
+    }
+
+    &--left {
+      margin-right: 16px;
+    }
+
+    &--right {
+      margin-left: auto;
+    }
+
+    &--circle {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__check {
+    @include absolute($t: 15px, $r: 16px);
+    @include invisible;
+  }
+
+  &.active {
+    .btn__check {
+      @include visible;
+    }
+  }
+}

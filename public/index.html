@@ -11,51 +11,112 @@
     <div class="converter-wrap">
       <div class="converter">
         <div class="converter__header">
-          <div class="converter__logo"><img src="./assets/img/logo.svg"></div>
-          <div class="converter__address">Литейный просп., 26,<br>Санкт-Петербург</div>
-          <!--include ../blocks/price-->
-          <!--include ../blocks/search-->
+          <div class="converter__logo step show" data-step="step-3"><img src="./assets/img/logo.svg"></div>
+          <div class="converter__address step show" data-step="step-3">Литейный просп., 26,<br>Санкт-Петербург</div>
+          <div class="price step show" data-step="step-1">
+            <div class="price__text">Сумма к оплате:</div>
+            <div class="price__num"><span>10 880,50</span><span>₽</span></div>
+          </div>
+          <form class="search step" action="" method="" data-step="step-2">
+            <div class="search__title">Выберите банк</div><input class="search__field" type="text" name="s" placeholder="Поиск" value=""><button class="search__submit" type="submit"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10.5" cy="10.5" r="6.75" stroke="#61788C" stroke-opacity="0.4" stroke-width="1.5"></circle>
+                <path d="M15 15L21 21" stroke="#61788C" stroke-opacity="0.4" stroke-width="1.5"></path>
+              </svg></button>
+          </form>
         </div>
         <div class="converter__body">
-          <!--include ../blocks/payments-->
-          <!--include ../blocks/banks-->
-          <!--include ../blocks/loader-->
-          <div class="qr">
+          <div class="converter__list step show" data-step="step-1">
+            <p class="converter__list-title">Выберите способ оплаты</p>
+            <div class="converter__list-item show"><input type="radio" name="payments" id="payment-1"><label class="btn btn--empty btn--md btn--wide" for="payment-1">
+                <div class="btn__icon btn__icon--left btn__icon--circle"><img src="./assets/img/sbp.svg" /></div>
+                <div class="btn__text">СБП</div>
+                <div class="btn__icon btn__icon--sm btn__check"><img src="./assets/img/tick.svg" /></div>
+              </label></div>
+            <div class="converter__list-item show"><input type="radio" name="payments" id="payment-2"><label class="btn btn--empty btn--md btn--wide" for="payment-2">
+                <div class="btn__icon btn__icon--left btn__icon--circle"><img src="./assets/img/yapay.svg" /></div>
+                <div class="btn__text">ЯPay</div>
+                <div class="btn__icon btn__icon--sm btn__check"><img src="./assets/img/tick.svg" /></div>
+              </label></div>
+            <div class="converter__list-item show"><input type="radio" name="payments" id="payment-3"><label class="btn btn--empty btn--md btn--wide" for="payment-3">
+                <div class="btn__icon btn__icon--left btn__icon--circle"><img src="./assets/img/mobile.svg" /></div>
+                <div class="btn__text">Со счета телефона</div>
+                <div class="btn__icon btn__icon--sm btn__check"><img src="./assets/img/tick.svg" /></div>
+              </label></div>
+          </div>
+          <div class="converter__list step" data-step="step-2">
+            <div class="converter__list-item show"><input type="radio" name="banks" id="bank-1"><label class="btn btn--empty btn--md btn--wide" for="bank-1">
+                <div class="btn__icon btn__icon--left btn__icon--circle"><img src="./assets/img/tinkoff.svg"></div>
+                <div class="btn__text">Тинькофф банк</div>
+                <div class="btn__icon btn__icon--sm btn__check"><img src="./assets/img/tick.svg"></div>
+              </label></div>
+            <div class="converter__list-item show"><input type="radio" name="banks" id="bank-2"><label class="btn btn--empty btn--md btn--wide" for="bank-2">
+                <div class="btn__icon btn__icon--left btn__icon--circle"><img src="./assets/img/alfabank.svg"></div>
+                <div class="btn__text">Альфа-Банк</div>
+                <div class="btn__icon btn__icon--sm btn__check"><img src="./assets/img/tick.svg"></div>
+              </label></div>
+            <div class="converter__list-item show"><input type="radio" name="banks" id="bank-3"><label class="btn btn--empty btn--md btn--wide" for="bank-3">
+                <div class="btn__icon btn__icon--left btn__icon--circle"><img src="./assets/img/sber.svg"></div>
+                <div class="btn__text">Сбербанк</div>
+                <div class="btn__icon btn__icon--sm btn__check"><img src="./assets/img/tick.svg"></div>
+              </label></div>
+            <div class="converter__list-item"><input type="radio" name="banks" id="bank-4"><label class="btn btn--empty btn--md btn--wide" for="bank-4">
+                <div class="btn__icon btn__icon--left btn__icon--circle"><img src="./assets/img/vtb.svg"></div>
+                <div class="btn__text">ВТБ</div>
+                <div class="btn__icon btn__icon--sm btn__check"><img src="./assets/img/tick.svg"></div>
+              </label></div>
+            <div class="converter__list-item"><input type="radio" name="banks" id="bank-5"><label class="btn btn--empty btn--md btn--wide" for="bank-5">
+                <div class="btn__icon btn__icon--left btn__icon--circle"><img src="./assets/img/raiffeisen.svg"></div>
+                <div class="btn__text">Райффайзен Банк</div>
+                <div class="btn__icon btn__icon--sm btn__check"><img src="./assets/img/tick.svg"></div>
+              </label></div>
+            <div class="converter__list-item"><input type="radio" name="banks" id="bank-6"><label class="btn btn--empty btn--md btn--wide" for="bank-6">
+                <div class="btn__icon btn__icon--left btn__icon--circle"><img src="./assets/img/otkritie.svg"></div>
+                <div class="btn__text">Открытие</div>
+                <div class="btn__icon btn__icon--sm btn__check"><img src="./assets/img/tick.svg"></div>
+              </label></div>
+            <div class="converter__list-item show"><button class="btn btn--empty btn--md btn--wide" data-toggle="more">
+                <div class="btn__icon btn__icon--left btn__icon--circle"><img src="./assets/img/dots.svg"></div>
+                <div class="btn__text">Другой банк</div>
+                <div class="btn__icon btn__icon--sm btn__check"><img src="./assets/img/tick.svg"></div>
+              </button></div>
+          </div>
+          <div class="loader step" data-step="step-3">
+            <div class="loader__ring"><img src="./assets/img/loader.svg"></div>
+            <div class="loader__text">Ожидаем ответа от банка....</div>
+            <div class="loader__success"><img src="./assets/img/loader_check.svg"></div>
+            <div class="loader__response">Успешно!</div>
+          </div>
+          <div class="qr step" step="step-4">
             <div class="qr__text">Для оплаты через СБП отсканируйте QR код и выполните платеж.</div>
-            <div class="qr__code"><img src="./assets/img/qr.svg" /></div>
+            <div class="qr__code"><img src="./assets/img/qr.svg"></div>
             <div class="qr__text">Ожидаем оплаты...</div>
           </div>
         </div>
         <div class="converter__footer">
-          <!--FIRST-->
-          <!--.converter__btns//button.btn.btn--full.btn--md.btn--wide
-//    .btn__text Выбрать
-//    .btn__icon.btn__icon--sm.btn__icon--right
-//        +img('arrow_r')
--->
-          <!--SECOND-->
-          <!--.converter__btns.converter__btns--row-->
-          <!--    button.btn.btn--empty-brand.btn--md.btn--center-->
-          <!--        .btn__icon.btn__icon--sm-->
-          <!--            +img('arrow_l')-->
-          <!---->
-          <!--    button.btn.btn--full.btn--md-->
-          <!--        .btn__text Далее-->
-          <!--        .btn__icon.btn__icon--sm.btn__icon--right-->
-          <!--            +img('arrow_r')-->
-          <!--THIRD-->
-          <!--.converter__btns-->
-          <!--    button.btn.btn--empty-brand.btn--md.btn--wide.btn--center-->
-          <!--        .btn__icon.btn__icon--sm.btn__icon--left-->
-          <!--            +img('arrow_l')-->
-          <!--        .btn__text Назад-->
-          <!--FOURTH-->
-          <div class="converter__btns converter__btns--col"><button class="btn btn--full btn--md btn--wide">
+          <!--STEP 1-->
+          <div class="converter__btns step show" data-step="step-1"><button class="btn btn--full btn--md btn--wide" data-toggle-step="step-2">
+              <div class="btn__text">Выбрать</div>
+              <div class="btn__icon btn__icon--sm btn__icon--right"><img src="./assets/img/arrow_r.svg"></div>
+            </button></div>
+          <!--STEP 2-->
+          <div class="converter__btns converter__btns--row step" data-step="step-2"><button class="btn btn--empty-brand btn--md btn--center" data-toggle-step="step-1">
+              <div class="btn__icon btn__icon--sm"><img src="./assets/img/arrow_l.svg"></div>
+            </button><button class="btn btn--full btn--md" data-toggle-step="step-3">
+              <div class="btn__text">Далее</div>
+              <div class="btn__icon btn__icon--sm btn__icon--right"><img src="./assets/img/arrow_r.svg"></div>
+            </button></div>
+          <!--STEP 3-->
+          <div class="converter__btns step" data-step="step-3"><button class="btn btn--empty-brand btn--md btn--wide btn--center" data-toggle-step="step-2">
+              <div class="btn__icon btn__icon--sm btn__icon--left"><img src="./assets/img/arrow_l.svg"></div>
+              <div class="btn__text">Назад</div>
+            </button></div>
+          <!--STEP 4-->
+          <div class="converter__btns converter__btns--col step" data-step="step-4"><button class="btn btn--full btn--md btn--wide">
               <div class="btn__text">Получить подарок!</div>
-              <div class="btn__icon btn__icon--sm btn__icon--right"><img src="./assets/img/gift.svg" /></div>
+              <div class="btn__icon btn__icon--sm btn__icon--right"><img src="./assets/img/gift.svg"></div>
             </button><button class="btn btn--empty-brand btn--md btn--wide">
               <div class="btn__text">Оставить чаевые</div>
-              <div class="btn__icon btn__icon--sm btn__icon--right"><img src="./assets/img/percentage.svg" /></div>
+              <div class="btn__icon btn__icon--sm btn__icon--right"><img src="./assets/img/percentage.svg"></div>
             </button></div>
           <div class="converter__powered"><span>Powered by</span><svg width="55" height="17" viewbox="0 0 55 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M17.6366 2.69632H19.361V13H17.6366V2.69632ZM23.9801 4.31342H20.6457V2.69632H29.0389V4.31342H25.7045V13H23.9801V4.31342ZM34.4404 2.69632C34.7552 2.69632 35.0295 2.7154 35.2633 2.75356C36.1315 2.88713 36.785 3.24966 37.2238 3.84117C37.6675 4.42791 37.8893 5.16491 37.8893 6.05217C37.8893 6.62937 37.7915 7.14932 37.5959 7.61203C37.4051 8.07474 37.1117 8.45636 36.7158 8.75689C36.3246 9.05741 35.8405 9.25299 35.2633 9.34362C35.0295 9.38179 34.7552 9.40087 34.4404 9.40087H31.9074V13H30.183V2.69632H34.4404ZM34.3689 7.79092C34.636 7.79092 34.853 7.76707 35.02 7.71936C35.4159 7.61919 35.7021 7.41168 35.8786 7.09685C36.0599 6.78201 36.1505 6.43379 36.1505 6.05217C36.1505 5.67055 36.0599 5.32233 35.8786 5.00749C35.7021 4.68789 35.4159 4.478 35.02 4.37782C34.8483 4.33489 34.6312 4.31342 34.3689 4.31342H31.9074V7.79092H34.3689ZM45.2163 6.4958C45.3404 6.74385 45.4191 7.00144 45.4525 7.26858C45.4906 7.53094 45.5097 7.86008 45.5097 8.25601V13H43.9999V11.9625C43.6708 12.3966 43.2892 12.7138 42.8551 12.9141C42.421 13.1145 41.8987 13.2147 41.2881 13.2147C40.7443 13.2147 40.2768 13.1121 39.8856 12.907C39.4992 12.6971 39.2035 12.4156 38.9984 12.0627C38.798 11.7097 38.6978 11.3161 38.6978 10.882C38.6978 10.3144 38.8386 9.83973 39.12 9.45811C39.4062 9.07649 39.8522 8.78074 40.458 8.57085C40.7967 8.46113 41.1855 8.36811 41.6244 8.29179C42.068 8.2107 42.7001 8.10814 43.5205 7.98411L43.8211 7.94118C43.7877 7.49278 43.6446 7.16363 43.3917 6.95374C43.1437 6.74385 42.7597 6.63891 42.2397 6.63891C41.8581 6.63891 41.5099 6.72716 41.195 6.90365C40.885 7.08015 40.6703 7.35206 40.5511 7.71936L38.9769 7.22564C39.1725 6.54827 39.5445 6.01878 40.0931 5.63716C40.6417 5.25077 41.3572 5.05758 42.2397 5.05758C42.9553 5.05758 43.5682 5.17445 44.0786 5.40819C44.5938 5.64193 44.9731 6.00447 45.2163 6.4958ZM43.6279 10.56C43.7328 10.3072 43.79 9.90651 43.7996 9.35793C43.0507 9.47719 42.5116 9.56782 42.1825 9.62984C41.8581 9.68708 41.5719 9.75863 41.3238 9.8445C41.0138 9.95898 40.78 10.0973 40.6226 10.2595C40.4652 10.4217 40.3865 10.622 40.3865 10.8606C40.3865 11.1515 40.4938 11.3877 40.7085 11.5689C40.9279 11.7502 41.2356 11.8408 41.6315 11.8408C41.9988 11.8408 42.3208 11.7764 42.5975 11.6476C42.8789 11.5141 43.1055 11.3495 43.2772 11.1539C43.449 10.9583 43.5658 10.7604 43.6279 10.56ZM52.1556 5.27224H53.88L49.5725 16.4346H47.9554L49.229 12.9428L46.1022 5.27224H47.8981L50.0591 10.8033L52.1556 5.27224Z" fill="#1A1A1A"></path>

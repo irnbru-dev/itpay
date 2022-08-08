@@ -25,23 +25,23 @@
   &--empty {
     color: $c-text;
     background: transparent;
-    border: 1px solid $c-border;
+    outline: 1px solid $c-border;
 
     @include hover {
-      border-color: $c-brand;
+      outline-color: $c-brand;
       outline: 2px solid $c-brand;
     }
 
     &:active,
     &.active {
-      border-color: $c-brand;
+      outline-color: $c-brand;
       outline: 2px solid $c-brand;
     }
 
     &:disabled {
       color: $c-text-secondary;
       background: transparent;
-      border-color: $c-disabled;
+      outline-color: $c-disabled;
       pointer-events: none;
     }
   }
@@ -49,23 +49,23 @@
   &--empty-brand {
     color: $c-brand;
     background: transparent;
-    border: 1px solid $c-brand;
+    outline: 1px solid $c-brand;
 
     @include hover {
-      border-color: $c-brand;
+      outline-color: $c-brand;
       outline: 2px solid $c-brand;
     }
 
     &:active,
     &.active {
-      border-color: $c-brand;
+      outline-color: $c-brand;
       outline: 2px solid $c-brand;
     }
 
     &:disabled {
       color: $c-text-secondary;
       background: transparent;
-      border-color: $c-disabled;
+      outline-color: $c-disabled;
       pointer-events: none;
     }
   }

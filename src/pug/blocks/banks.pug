@@ -28,20 +28,21 @@ include ../inc/_mixins
         }
     }
 
-.converter__list
+.converter__list.step(data-step='step-2')
     - var i = 0;
-    for payment in banks
-        if i < 3
-            .converter__list-item
-                button.btn.btn--empty.btn--md.btn--wide
-                    .btn__icon.btn__icon--left.btn__icon--circle
-                        +img(payment.logo)
-                    .btn__text= payment.title
-                    .btn__icon.btn__icon--sm.btn__check
-                        +img('tick')
-            - i++
+    for bank in banks
+        - i++
+        - var classList = i < 4 ? 'show' : '';
+        .converter__list-item(class=classList)
+            input(type='radio', name="banks", id='bank-' + i)
+            label(for='bank-' + i).btn.btn--empty.btn--md.btn--wide
+                .btn__icon.btn__icon--left.btn__icon--circle
+                    +img(bank.logo)
+                .btn__text= bank.title
+                .btn__icon.btn__icon--sm.btn__check
+                    +img('tick')
 
-    .converter__list-item
+    .converter__list-item.show
         button.btn.btn--empty.btn--md.btn--wide(data-toggle='more')
             .btn__icon.btn__icon--left.btn__icon--circle
                 +img('dots')

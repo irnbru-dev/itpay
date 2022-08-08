@@ -9,43 +9,43 @@ html(lang='ru')
             .converter
                 .converter__header
                     include ../blocks/address
-                    //include ../blocks/price
-                    //include ../blocks/search
+                    include ../blocks/price
+                    include ../blocks/search
 
                 .converter__body
-                    //include ../blocks/payments
-                    //include ../blocks/banks
-                    //include ../blocks/loader
+                    include ../blocks/payments
+                    include ../blocks/banks
+                    include ../blocks/loader
                     include ../blocks/qr
 
                 .converter__footer
-                    //FIRST
-                    //.converter__btns
-                        //button.btn.btn--full.btn--md.btn--wide
-                        //    .btn__text Выбрать
-                        //    .btn__icon.btn__icon--sm.btn__icon--right
-                        //        +img('arrow_r')
+                    //STEP 1
+                    .converter__btns.step.show(data-step='step-1')
+                        button.btn.btn--full.btn--md.btn--wide(data-toggle-step="step-2")
+                            .btn__text Выбрать
+                            .btn__icon.btn__icon--sm.btn__icon--right
+                                +img('arrow_r')
 
-                    //SECOND
-                    //.converter__btns.converter__btns--row
-                    //    button.btn.btn--empty-brand.btn--md.btn--center
-                    //        .btn__icon.btn__icon--sm
-                    //            +img('arrow_l')
-                    //
-                    //    button.btn.btn--full.btn--md
-                    //        .btn__text Далее
-                    //        .btn__icon.btn__icon--sm.btn__icon--right
-                    //            +img('arrow_r')
+                    //STEP 2
+                    .converter__btns.converter__btns--row.step(data-step='step-2')
+                        button.btn.btn--empty-brand.btn--md.btn--center(data-toggle-step='step-1')
+                            .btn__icon.btn__icon--sm
+                                +img('arrow_l')
 
-                    //THIRD
-                    //.converter__btns
-                    //    button.btn.btn--empty-brand.btn--md.btn--wide.btn--center
-                    //        .btn__icon.btn__icon--sm.btn__icon--left
-                    //            +img('arrow_l')
-                    //        .btn__text Назад
+                        button.btn.btn--full.btn--md(data-toggle-step='step-3')
+                            .btn__text Далее
+                            .btn__icon.btn__icon--sm.btn__icon--right
+                                +img('arrow_r')
 
-                    //FOURTH
-                    .converter__btns.converter__btns--col
+                    //STEP 3
+                    .converter__btns.step(data-step='step-3')
+                        button.btn.btn--empty-brand.btn--md.btn--wide.btn--center(data-toggle-step='step-2')
+                            .btn__icon.btn__icon--sm.btn__icon--left
+                                +img('arrow_l')
+                            .btn__text Назад
+
+                    //STEP 4
+                    .converter__btns.converter__btns--col.step(data-step='step-4')
                         button.btn.btn--full.btn--md.btn--wide
                             .btn__text Получить подарок!
                             .btn__icon.btn__icon--sm.btn__icon--right

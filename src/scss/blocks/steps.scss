@@ -1,0 +1,9 @@
+.step {
+  display: none;
+  @include invisible;
+
+  &.show {
+    display: grid;
+    @include visible;
+  }
+}

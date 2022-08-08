@@ -54,9 +54,35 @@
     }
 
     &-item {
+      display: none;
+      opacity: 0;
+      transform: translateY(10px);
+
+      &.show {
+        display: flex;
+        animation: fadeInTop $t-def forwards;
+
+        @for $i from 1 through 50 {
+          &:nth-child(#{$i}) {
+            animation-delay: #{$i * .02}s;
+          }
+        }
+      }
+
+      input {
+        display: none;
+      }
+
+      input:checked + label {
+        outline-color: $c-brand;
+
+        .btn__check {
+          @include visible;
+        }
+      }
 
       & + & {
-        margin-top: 8px;
+        margin-top: 10px;
       }
     }
   }

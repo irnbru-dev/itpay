@@ -8,7 +8,7 @@ let checkScrollable = () => {
     }
 };
 
-if (isMobileDevice) {
+if (!isMobileDevice) {
     document.addEventListener('DOMContentLoaded', checkScrollable);
     window.addEventListener('resize', checkScrollable);
 }

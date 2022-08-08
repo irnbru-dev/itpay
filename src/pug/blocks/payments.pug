@@ -2,26 +2,28 @@
     var payments = {
         '1': {
             'title': 'СБП',
-            'logo': 'sbp.svg'
+            'logo': 'sbp'
         },
         '2': {
             'title': 'ЯPay',
-            'logo': 'yapay.svg'
+            'logo': 'yapay'
         },
         '3': {
             'title': 'Со счета телефона',
-            'logo': 'mobile.svg'
+            'logo': 'mobile'
         }
     }
 
-.converter__list
+.converter__list.step.show(data-step='step-1')
     p.converter__list-title Выберите способ оплаты
+    - var i = 0;
     each payment in payments
-        .converter__list-item
-            button.btn.btn--empty.btn--md.btn--wide
+        - i++
+        .converter__list-item.show
+            input(type='radio', name="payments", id='payment-' + i)
+            label(for='payment-' + i).btn.btn--empty.btn--md.btn--wide
                 .btn__icon.btn__icon--left.btn__icon--circle
-                    img(src= './assets/img/' + payment.logo)
+                    +img(payment.logo)
                 .btn__text= payment.title
                 .btn__icon.btn__icon--sm.btn__check
-                    svg(width='24' height='24' viewbox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
-                        path(d='M4.5 10.5L10.5 16.5L21 6' stroke='#2151F5' stroke-width='2')
+                    +img('tick')

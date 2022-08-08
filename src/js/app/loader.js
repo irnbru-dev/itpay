@@ -1,8 +1,11 @@
 //pseudocode
-let loader = document.querySelector('.loader');
+document.addEventListener('step:show', () => {
 
-if (loader) {
-    setTimeout(() => {
-        loader.classList.add('success');
-    }, 2000);
-}
+    let loader = document.querySelector('.loader.show');
+
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add('success');
+        }, 2000);
+    }
+});
